@@ -1,0 +1,172 @@
+/*
+/////////////////////////////////////////////
+///////////GLOBAL STYLES/////////////////////
+///////////////////////////////////////////
+*/
+.hidden {
+    display: none;
+}
+
+.btn-primary {
+    background-color: #083568 !important; 
+}
+
+.btn-primary:hover {
+    background-color: #0D54A4 !important;
+}
+
+/*
+/////////////////////////////////////////////
+////////////////NAVBAR STYLES///////////////
+///////////////////////////////////////////
+*/
+nav {
+    background-color: #dce5ec;
+    height: 65px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.navbar-brand {
+    color: black !important;
+    font-size: 35px;
+}
+
+.nav-link {
+    color: rgba(0, 0, 0, 0.61) !important;
+}
+
+.nav-link:hover {
+    color: black !important;
+}
+
+.active-link {
+    color: black !important;
+}
+
+nav.scrolled {
+    background-color: #083568;
+    height: 75px;
+}
+
+.navbar-brand.scrolled {
+    color: white !important;
+}
+
+.nav-link.scrolled {
+    color: rgba(255, 255, 255, 0.548) !important;
+}
+
+.nav-link.scrolled:hover {
+    color: white !important;
+}
+
+.active-link.scrolled {
+    color: white !important;
+}
+
+/*
+/////////////////////////////////////////////
+/////////////CONTENT STYLES/////////////////
+///////////////////////////////////////////
+*/
+#content-wrapper {
+    margin-top: 55px;
+}
+
+
+/*
+/////////////////////////////////////////////
+////////////////HOME STYLES/////////////////
+///////////////////////////////////////////
+*/
+.jumbotron {
+    background-color: #dce5ec; 
+    height: 1000px;
+}
+
+/*
+/////////////////////////////////////////////
+////////////////DEMO STYLES/////////////////
+///////////////////////////////////////////
+*/
+#demo-wrapper {
+    margin-top: 1.5rem;
+}
+
+.crossover-box {
+    height: 300px !important;
+}
+
+.crossover-btn {
+    margin-left: 15%;
+    width: 100px;
+}
+
+#crossover-btn-add {
+    margin-bottom: 5%;
+    margin-top: 80%;
+}
+
+.row {
+    margin-top: 1rem;
+}
+
+#add-new-item-btn {
+    margin-top: 20%;
+    width: 100px;
+}
+
+/*
+/////////////////////////////////////////////
+//////////////FOOTER STYLES/////////////////
+///////////////////////////////////////////
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+#page-wrapper {
+    min-height: 100%;
+}
+
+#main-content {
+    overflow: auto;
+    padding-bottom: 200px;
+}
+
+#footer-wrapper {
+    background-color: #dce5ec;
+    height: 200px;
+    margin-top: -200px;
+    position: relative;
+    clear: both;
+}
+
+#footer-container {
+    color: #083568;
+    padding-top: 30px;
+    text-align: center;
+}
+
+#footer-col {
+    padding: 0 !important;
+}
+
+.footer-icon {
+    color: #083568;
+    font-size: 50px;
+    transition: all ease-in-out 300ms;
+}
+
+.footer-icon:hover {
+    cursor: pointer;
+}

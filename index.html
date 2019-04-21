@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Multi-Select Crossover</title>
+    <!--CSS Reset-->
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Google Fonts-->
+    <!--favicon-->
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!--Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+
+    <div id="page-wrapper">
+    <div id="main-content">
+
+    <!--Navigation-->
+    <nav class="navbar navbar-expand-md navbar-light fixed-top">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="#"><i class="fas fa-dog"></i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-responsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbar-responsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="#">Demo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">README</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!--content-->
+    <div id="content-wrapper">
+
+        <!--home-->
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Fluid jumbotron</h1>
+                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+            </div>
+        </div>
+
+        <!--demo-->
+        <div class="container" id="demo-wrapper">
+
+            <div class="row">
+                <div class="col-md-7">
+                    <button type="button" class="btn btn-primary" id="crossover-btn-add-all">Add All</button>
+                </div>
+                <div class="col-md-5">
+                    <button type="button" class="btn btn-primary" id="crossover-btn-remove-all">Remove All</button>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-5">
+                    <label for="items">Items</label>
+                    <select multiple class="form-control crossover-box" id="items"></select>
+                </div>
+
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-primary crossover-btn" id="crossover-btn-add">Add</button>
+                    <button type="button" class="btn btn-primary crossover-btn" id="crossover-btn-remove">Remove</button>
+                </div>
+
+                <div class="col-md-5">
+                    <label for="selected">Selected Items</label>
+                    <select multiple class="form-control crossover-box" id="selected"></select>
+                </div>
+            </div>
+
+            <div class="row" id="new-item-row">
+                <div class="col-md-4">
+                    <label for="new-item">New Item</label>
+                    <input type="text" class="form-control" id="new-item-input">
+                </div>
+
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-primary" id="add-new-item-btn">Add</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-5">
+                    <button type="button" class="btn btn-primary" id="reset-btn">Reset Demo</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!--docs-->
+    
+    </div>
+
+    </div>
+    </div>
+
+    <!--footer-->
+    <footer class="container-fluid" id="footer-wrapper">
+        <div class="container" id="footer-container">
+            <div class="row" id="footer-row">
+                <div class="col-md-12 py-5" id="footer-col">
+                    <div class="mb-5 flex-center">
+                        <a href="https://github.com/jfriedman823"><i class="fab fa-github-square footer-icon"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center py-3" id="footer-copyright">
+                © 2019 Copyright:
+                <a href="https://github.com/jfriedman823"> Jeremy Friedman</a>
+            </div>
+        </div>
+    </footer>
+
+<!--jQuery-->
+<script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+<!--Bootstrap stack-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!--Custom JS-->
+<script type="text/javascript" src="js/crossover.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+</body>
+
+</html>
