@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>jQuery Multi-Select Crossover</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--CSS Reset-->
     <link rel="stylesheet" type="text/css" href="css/reset.css"/>
     <!--Bootstrap-->
@@ -33,13 +34,13 @@
             <div class="collapse navbar-collapse" id="navbar-responsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link active-link" href="#">Home</a>
+                        <a class="nav-link active-link" href="#page-wrapper">Home</a>
                     </li>
                     <li class="nav-item">
-                            <a class="nav-link" href="#">Demo</a>
+                            <a class="nav-link" href="#demo-wrapper">Demo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">README</a>
+                        <a class="nav-link" href="#code-wrapper">Code</a>
                     </li>
                 </ul>
             </div>
@@ -53,8 +54,9 @@
         <!--home-->
         <div class="jumbotron jumbotron-fluid">
             <div class="container" id="home-content">
-                <h1 class="display-3">jQuery Multi-Select Crossover</h1>
-                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                <h1 class="display-3">Multi-Select Crossover</h1>
+                <p class="lead">powered by</p>
+                <img id="jquery-logo" src="img/jquery.jpg" alt="https://www.iconfinder.com/icons/282806/jquery_logo_icon">
             </div>
         </div>
 
@@ -71,25 +73,25 @@
             </div>
             
             <div class="row">
-                <div class="col-md-5">
-                    <label for="items">Items</label>
+                <div class="col-md-5 col-sm-12">
+                    <label class="label" for="items">Items</label>
                     <select multiple class="form-control crossover-box" id="items"></select>
                 </div>
 
-                <div class="col-md-2">
+                <div class="col-md-2 col-sm-12">
                     <button type="button" class="btn btn-primary crossover-btn" id="crossover-btn-add">Add</button>
                     <button type="button" class="btn btn-primary crossover-btn" id="crossover-btn-remove">Remove</button>
                 </div>
 
-                <div class="col-md-5">
-                    <label for="selected">Selected Items</label>
+                <div class="col-md-5 col-sm-12">
+                    <label class="label" for="selected">Selected Items</label>
                     <select multiple class="form-control crossover-box" id="selected"></select>
                 </div>
             </div>
 
             <div class="row" id="new-item-row">
                 <div class="col-md-4">
-                    <label for="new-item">New Item</label>
+                    <label class="label" for="new-item">New Item</label>
                     <input type="text" class="form-control" id="new-item-input">
                 </div>
 
@@ -106,7 +108,15 @@
 
         </div>
 
-        <!--docs-->
+        <hr>
+
+        <!--code-->
+        <div class="container" id="code-wrapper">
+
+            <div class="row"></div>
+
+
+        </div>
     
     </div>
 

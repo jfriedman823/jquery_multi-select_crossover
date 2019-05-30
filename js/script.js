@@ -17,4 +17,18 @@ $(function() {
         }
     });
 
+///////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////NAVBAR SCROLL/////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+    $('.nav-link').click(function() {
+        $('.active-link').removeClass('active-link');
+        $(this).addClass('active-link');
+
+        $('html, body').animate({
+            scrollTop: $(this.hash).offset().top
+        }, 900, function() {
+            window.location.hash = this.hash;
+        });
+    });
+
 });
