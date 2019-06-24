@@ -162,22 +162,37 @@ hr {
 */
 
 #code-wrapper {
+    color: #5A53EA;
     margin-top: 8rem;
     margin-bottom: 8rem;
-
-}
-.card-header {
-    background-color: #083568;
-    color: white;
 }
 
-.card-img {
+.card-row {
+    margin-bottom: 3rem;
+}
+
+.card {
+    border: none;
+}
+
+.card-body img {
     height: 100%;
     width: 100%;
-}
+} 
 
 .card-text {
-    margin-top: 5px;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+@media screen and (min-width: 800px) {
+    .card-body-2 {
+        margin-top: 4rem;
+    }
+
+    .card-body-3 {
+        margin-top: 16rem;
+    }
 }
 
 /*

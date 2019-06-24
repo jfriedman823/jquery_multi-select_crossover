@@ -25,10 +25,36 @@ $(function() {
         $(this).addClass('active-link');
 
         $('html, body').animate({
-            scrollTop: $(this.hash).offset().top
+            scrollTop: $(this.hash).offset().top-100
         }, 900, function() {
             window.location.hash = this.hash;
         });
     });
+
+///////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////NAVBAR SCROLL/////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+    activeNav();
+    function activeNav() {
+        var sections = $('.wrapper'),
+            nav = $('nav'),
+            nav_height = nav.outerHeight();
+
+        $(window).scroll(function() {
+            var position = $(this).scrollTop();
+            
+            sections.each(function() {
+                var top = $(this).offset().top - nav_height,
+                    bottom = top + $(this).outerHeight();
+
+                if (position >= top && position <= bottom) {
+                    nav.find('.active-link').removeClass('active-link');
+                    nav.find('.nav-link[href="#' + $(this).attr('id') + '"]').addClass('active-link');
+                }
+            });
+        });
+
+    }
+
 
 });

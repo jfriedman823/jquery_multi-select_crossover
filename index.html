@@ -6,15 +6,14 @@
     <title>jQuery Multi-Select Crossover</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--CSS Reset-->
-    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
     <!--Bootstrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!--Google Fonts-->
-    <!--favicon-->
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap-4.3.1/bootstrap.min.css">
     <!--Font Awesome-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="libs/fontawesome-5.9.0/css/all.min.css">
+
     <!--Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
@@ -34,7 +33,7 @@
             <div class="collapse navbar-collapse" id="navbar-responsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link active-link" href="#page-wrapper">Home</a>
+                        <a class="nav-link active-link" href="#home-wrapper">Home</a>
                     </li>
                     <li class="nav-item">
                             <a class="nav-link" href="#demo-wrapper">Demo</a>
@@ -52,7 +51,7 @@
     <div id="content-wrapper">
 
         <!--home-->
-        <div class="jumbotron jumbotron-fluid">
+        <div class="jumbotron jumbotron-fluid wrapper" id="home-wrapper">
             <div class="container" id="home-content">
                 <h1 class="display-3">Multi-Select Crossover</h1>
                 <p class="lead">powered by</p>
@@ -61,7 +60,7 @@
         </div>
 
         <!--demo-->
-        <div class="container" id="demo-wrapper">
+        <div class="container wrapper" id="demo-wrapper">
 
             <div class="row">
                 <div class="col-md-7">
@@ -111,10 +110,123 @@
         <hr>
 
         <!--code-->
-        <div class="container" id="code-wrapper">
+        <div class="container wrapper" id="code-wrapper">
 
-            <div class="row"></div>
+            <div class="row card-row">
 
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="img/code-generate_options.PNG">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">
+                                The basic function the multi-select crossover relies on.
+                                It takes two arguments: arr (array of strings) and targetMultiSelect (the id for the items/selected items select box).
+                                The button presses simply call upon this function.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="row card-row">
+
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body card-body-2">
+                            <p class="card-text">
+                                The add button removes the selected option elements from the 'items' select box, and calls on the generateOptionElements function to create new elements that are appended to the 'selected items' select box.
+                            </p>
+
+                            <p class="card-text">
+                                The remove button removes the selected option elements from the 'selected items' select box and stores their values in an array.
+                                Next each option element from the 'items' select box are pushed to the array and removed.
+                                The array is alphabetized.
+                                The generateOptionElements function is called to generate option elements and append to the 'items' select box.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="img/code-add_remove_btns.png">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="row card-row">
+
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="img/code-addAll_removeAll_btns.png">
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body card-body-3">
+                            <p class="card-text">
+                                The add all/remove all buttons are just an extension of the add/remove buttons.
+                                The add all will select all option elements from the 'items' select box, remove them, and create new option elements in the 'selected items' select box.
+                                The remove all will do the same thing, but will sort the options before appending the new option elements.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+
+            <hr>
+
+            <div class="row card-row">
+
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">
+                                In the case that the user would like to select an option that's not available, they can temporarily add it.
+                            </p>
+
+                            <p class="card-text">
+                                The user can enter a custom option using the text input. The 'new item' add button grabs the input string and pushes it to an array.
+                                The existing selected options are also pushed to the array.
+                                Then using the generateOptionElements function, the array is converted into option elements and appended to the 'selected items' select box.
+                            </p>
+
+                            <p class="card-text">
+                                The new custom option can be removed and readded just like any of the existing options.
+                                Once the page is refreshed the option will no longer persist and will need to be readded.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="img/code-add_new_item.PNG">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
     
@@ -135,16 +247,16 @@
             </div>
             <div class="text-center py-3" id="footer-copyright">
                 © 2019 Copyright:
-                <a href="https://github.com/jfriedman823"> Jeremy Friedman</a>
+                <a href="jeremyfriedman.dev"> Jeremy Friedman</a>
             </div>
         </div>
     </footer>
 
 <!--jQuery-->
-<script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="libs/jquery-3.4.1/jquery.min.js"></script>
 <!--Bootstrap stack-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script type="text/javascript" src="libs\bootstrap-4.3.1\bootstrap.bundle.min.js"></script>
+
 <!--Custom JS-->
 <script type="text/javascript" src="js/crossover.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
