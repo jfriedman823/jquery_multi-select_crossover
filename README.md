@@ -6,6 +6,12 @@ This is a demo for a simple multi-select widget built on jQuery. I built this to
 ## Use
 The widget was designed for use with forms. The first select box is populated using array data. The buttons simply move options between the two select boxes. I've also added a text input for users to manually add entries.
 
+## Dependencies
+All you need is a link to jQuery. I'm using jQuery v3.4.1. 
+You can download jQuery here: https://jquery.com/
+
+I'm also using bootstrap, but any css framework will work.
+
 ## Validation
 The widget is compatible with form validation libraries. I've used it with both jQuery Validator and Kendo UI validation.
 
